@@ -1,0 +1,85 @@
+.nav {
+  background: var(--dark);
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+
+.tabs { display: flex; gap: 0.25rem; }
+
+.tab {
+  padding: 0.4rem 1rem;
+  background: none;
+  border: none;
+  color: #8B7355;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tab:hover { color: var(--cream); background: rgba(255,255,255,0.05); }
+.tab.active { color: var(--gold); background: rgba(201,169,110,0.1); }
+
+.badge {
+  background: var(--gold);
+  color: var(--dark);
+  border-radius: 10px;
+  padding: 1px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.right { display: flex; align-items: center; gap: 0.75rem; }
+
+.avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.username { color: var(--cream); font-size: 0.875rem; }
+
+.logout {
+  padding: 0.35rem 0.9rem;
+  background: none;
+  border: 1px solid rgba(201,169,110,0.3);
+  color: var(--gold);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout:hover { background: rgba(201,169,110,0.1); }
+
+@media (max-width: 768px) {
+  .nav { padding: 0 1.25rem; }
+  .tabs { display: none; }
+  .username { display: none; }
+}

@@ -1,0 +1,49 @@
+.page {
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header { margin-bottom: 2rem; }
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--dark);
+}
+
+.sub { color: var(--muted); font-size: 0.9rem; margin-top: 0.3rem; }
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 0.4rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--muted);
+  background: var(--card);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.chip:hover { border-color: var(--gold); color: var(--brown); }
+.chip.active { background: var(--dark); color: var(--gold); border-color: var(--dark); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .page { padding: 1.5rem; }
+}
